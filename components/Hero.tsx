@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { SLIDER_DATA } from '../constants';
+import { SLIDER_DATA } from '../constants.tsx';
 
 const Hero: React.FC = () => {
   const [current, setCurrent] = useState(0);

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { WHY_CHOOSE_US } from '../constants';
+import { WHY_CHOOSE_US } from '../constants.tsx';
 
 const About: React.FC = () => {
   return (

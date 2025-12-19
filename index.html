@@ -22,19 +22,29 @@
             backdrop-filter: blur(12px);
             background-color: rgba(15, 23, 42, 0.85);
         }
+        /* Fix for potential FOUC or white flash while Babel loads */
+        [vh-cloak] { display: none; }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
-  }
-}
-</script>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+      }
+    }
+    </script>
+    <!-- Babel standalone for browser-side TSX transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script>
+        // Simple process.env polyfill for libraries that expect it
+        window.process = { env: { NODE_ENV: 'production' } };
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-900">
     <div id="root"></div>
+    <script type="text/babel" data-presets="typescript,react" data-type="module" src="./index.tsx"></script>
 </body>
 </html>

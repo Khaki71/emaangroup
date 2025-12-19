@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { ChevronRight, ExternalLink } from 'lucide-react';
-import { COMPANIES } from '../constants';
+import { COMPANIES } from '../constants.tsx';
 
 const Companies: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
-import { ContactFormData } from '../types';
+import { ContactFormData } from '../types.ts';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-lg">Call/WhatsApp Us</h4>
-                  <p className="text-slate-400">+86 187 5757 11294 (China)</p>
+                  <p className="text-slate-400">+86 187 5757 1294 (China)</p>
                   <p className="text-slate-400">+92 300 592 1560 (Pakistan)</p>
                 </div>
               </div>
@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4">
                 <a 
-                    href="https://wa.me/86187575711294" 
+                    href="https://wa.me/8618757571294" 
                     target="_blank" 
                     rel="noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-emerald-500/20"

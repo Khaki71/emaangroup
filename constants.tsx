@@ -11,7 +11,7 @@ import {
   Clock,
   Warehouse
 } from 'lucide-react';
-import { SliderContent, ServiceItem, NavItem } from './types';
+import { SliderContent, ServiceItem, NavItem } from './types.ts';
 
 export const COLORS = {
   primary: '#0f172a', // Slate 900
